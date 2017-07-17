@@ -3,24 +3,39 @@
 
 *{margin: 0; padding: 0; box-sizing: border-box;font-family: 'Nanum Gothic', serif;}
 
-header{width: 100%; height: 100px; display: block; background:rgba(255, 255, 255, 0.5); position: fixed; z-index: 10}
+header{width: 100%; height: 130px; display: block; background:rgba(255, 255, 255, 0.5); position: fixed; z-index: 10}
 header .logo{width: 390px; height:auto; background: url('../img/ck-logo.png')no-repeat center; background-size:contain; position: fixed; margin: 0 auto; left: 0; right: 0; padding-top: 100px;}
 
 /*건들 ㄴㄴ*/
 .content_main{position: relative; top: 0; border: 1px solid #000; background: url('../img/shop_main_b.jpg') no-repeat center; background-size: auto 100%; font-family: 'Raleway', sans-serif; cursor: pointer; display: none;}
-.content_main .click_ball{width: 50px; height: 50px; border:1px solid #000; position: absolute; left: 50%; right: 50%; top: 50%;}
+	.content_main .click_ball{width: 50px; height: 50px; border:1px solid #000; position: absolute; left: 50%; right: 50%; top: 50%;}
 
 /*section*/
-.section{padding: 0 10px; position: relative; padding-top: 100px;}
-.section .line{width: 100%; height: 50px; background: url("../img/shop_back_b.jpg") no-repeat; background: cover;}
-.line:first-child{top: 0;}
-.line:last-child{bottom: 0;}
+.section{position: relative; padding-top: 130px;}
+	.section .line{width: 100%; height: 50px; background: url("../img/shop_back_b.jpg") no-repeat; background: cover;}
+		.line:first-child{top: 0;}
+		.line:last-child{bottom: 0;}
 
 /*content*/
 .content{width: 100%; border: 1px solid #000;}
-.c_01 .media{padding: 10px; /*border-right: 50px solid #000; border-bottom: 50px solid #000;border-right: 50xp solid transparent; border-top: 50px solid transparent*/}
-.c_01 .c_video{width: 560px; overflow: hidden; position: absolute; margin-left: 180px; margin-top:117px; z-index: 4}
-.media img{width: 560px; height: auto; position: absolute;}
-.media .c_i1{margin-left: 200px; margin-top:137px; z-index: 2}
-.media .c_i2{margin-left: 190px; margin-top:127px; z-index: 3}
-.media .m_text{margin-left: 210px; margin-top:147px; z-index: 1; border: 3px solid double}
+	.media{width:42%; margin: 0 auto; position: relative; margin-top: 100px}
+		.media li{width: 515px; list-style: none; float: left; position: relative; margin-left: -500px;}
+			.media li .media_c{width:100%; height: 100%; position:absolute; z-index: 6; color: #ddd}
+.media_c h2{width: 100%; height: 80px; text-align: center; height:80px; font-size: 3em; margin-top: 90px;}
+.media_c span{display: block; width: 50px; height: 50px; background: rgba(0,0,0,0.4); border-radius: 50%; text-align: center; line-height: 50px; font-size: 2em; margin: 0 auto; cursor: pointer}
+			.media li ifram{z-index: 5;}
+			.media li img{width: 100%; height: 100%}
+			.media li p{width: 100%; height: 100%;}
+
+			.media li:first-child{z-index: 4;}
+			.media li:nth-child(2){z-index: 3;}
+			.media li:nth-child(3){z-index: 2;}
+			.media li:last-child{z-index: 1;}
+
+			.media li::after{content:" "; position: absolute; left: 0; right: 0; top:0; width: 100%; height: 100%; }
+				.media li:first-child::after{background: rgba(34, 34, 34, 0.9)}
+				.media li:nth-child(2)::after{background: rgba(68, 68, 68, 0.9)}
+				.media li:nth-child(3)::after{background: rgba(102, 102, 102, 0.9)}
+				.media li:last-child::after{background: rgba(136, 136, 136, 0.9)}
+
+.m_p{width: 560px; float: right; border: 1px solid #000; background: #666; color: #fff;}
