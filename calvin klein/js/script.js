@@ -15,22 +15,35 @@ $(".content").eq(0).css({
 	"height": win_height - line_height - 100 + "px"
 })
 
-$(".media li, .m_p").css({
+$(".media li").css({
 	"height": c01_img + "px"
 })
 
-function media_on() {
-	var media_l = (".media li").lenght();
-	$(".media").css({
-		"width": 400 * media_l + "px"
-	});
-}
-
 $(".on_btn").click(function () {
-	$(".media").css({
-		"width" : "100%"
+    $(".on_h2").html("Close");
+    $(".on_btn").html("&larr;");
+	$(".media").animate({
+		"width" : "100%",
+        "margin-right" : "0",
+        "right" : "0",
 	});
 	$(".media li").animate({
-		"margin-left" : "0px",
+		"margin" : "0px",
 	});
+    $(".on_btn").addClass("close_btn");
+    $(".on_btn").removeClass("on_btn");
+});
+$(".close_btn").click(function(){
+    $(".on_h2").html("Open");
+    $(".on_btn").html("&rarr;");
+    $(".media").animate({
+       "width" : "472.25px",
+        "margin-right" : "200px",
+        "right" : "200px",
+    });
+    $(".media li").animate({
+        "margin-right" : "-400px"
+    });
+    $(this).addClass(".on_btn");
+    $(this).removeClass("close_btn");
 });
